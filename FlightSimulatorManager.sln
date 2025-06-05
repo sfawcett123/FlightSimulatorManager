@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimListener", "SimListener\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSimulator", "FlightSimulator\FlightSimulator.csproj", "{15A06DDA-9BE8-4DE0-8BF1-1E9D2C396C63}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Redis", "Redis\Redis.csproj", "{5130AFBE-8AF0-49D2-A745-2F7DB9BB1715}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{15A06DDA-9BE8-4DE0-8BF1-1E9D2C396C63}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15A06DDA-9BE8-4DE0-8BF1-1E9D2C396C63}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15A06DDA-9BE8-4DE0-8BF1-1E9D2C396C63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5130AFBE-8AF0-49D2-A745-2F7DB9BB1715}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5130AFBE-8AF0-49D2-A745-2F7DB9BB1715}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5130AFBE-8AF0-49D2-A745-2F7DB9BB1715}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5130AFBE-8AF0-49D2-A745-2F7DB9BB1715}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

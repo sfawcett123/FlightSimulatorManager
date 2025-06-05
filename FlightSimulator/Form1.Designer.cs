@@ -31,9 +31,12 @@
             components = new System.ComponentModel.Container();
             statusStrip1 = new StatusStrip();
             connectionStatus = new ToolStripStatusLabel();
+            redisStatus = new ToolStripStatusLabel();
             Connect = new Button();
             timer1 = new System.Windows.Forms.Timer(components);
             listView1 = new ListView();
+            Key = new ColumnHeader();
+            Value = new ColumnHeader();
             statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -41,22 +44,27 @@
             // 
             statusStrip1.BackColor = Color.LightGray;
             statusStrip1.ForeColor = Color.Black;
-            statusStrip1.Items.AddRange(new ToolStripItem[] { connectionStatus });
+            statusStrip1.Items.AddRange(new ToolStripItem[] { connectionStatus, redisStatus });
             statusStrip1.Location = new Point(0, 428);
             statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(433, 22);
+            statusStrip1.Size = new Size(658, 22);
             statusStrip1.TabIndex = 0;
-            statusStrip1.Text = "Not Connected";
             // 
             // connectionStatus
             // 
+            connectionStatus.Image = Properties.Resources.plane_red;
             connectionStatus.Name = "connectionStatus";
-            connectionStatus.Size = new Size(88, 17);
-            connectionStatus.Text = "Not Connected";
+            connectionStatus.Size = new Size(16, 17);
+            // 
+            // redisStatus
+            // 
+            redisStatus.Image = Properties.Resources.redis_red;
+            redisStatus.Name = "redisStatus";
+            redisStatus.Size = new Size(16, 17);
             // 
             // Connect
             // 
-            Connect.Location = new Point(347, 386);
+            Connect.Location = new Point(571, 390);
             Connect.Name = "Connect";
             Connect.Size = new Size(75, 23);
             Connect.TabIndex = 1;
@@ -70,29 +78,38 @@
             // 
             // listView1
             // 
+            listView1.AllowColumnReorder = true;
+            listView1.Columns.AddRange(new ColumnHeader[] { Key, Value });
+            listView1.FullRowSelect = true;
+            listView1.GridLines = true;
             listView1.Location = new Point(16, 13);
             listView1.Name = "listView1";
-            listView1.Size = new Size(325, 396);
+            listView1.Size = new Size(550, 400);
+            listView1.Sorting = SortOrder.Ascending;
             listView1.TabIndex = 2;
             listView1.UseCompatibleStateImageBehavior = false;
-            listView1.AllowColumnReorder = true;
-            listView1.GridLines = true;
-            listView1.FullRowSelect = true;
-            listView1.Sorting = SortOrder.Ascending;
             listView1.View = View.Details;
-            listView1.Columns.Add("Key", -2, HorizontalAlignment.Left);
-            listView1.Columns.Add("Value", -2, HorizontalAlignment.Left);
+            // 
+            // Key
+            // 
+            Key.Text = "Key";
+            Key.Width = 275;
+            // 
+            // Value
+            // 
+            Value.Text = "Value";
+            Value.Width = 275;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(433, 450);
+            ClientSize = new Size(658, 450);
             Controls.Add(listView1);
             Controls.Add(Connect);
             Controls.Add(statusStrip1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Flight Simulator Listener";
             statusStrip1.ResumeLayout(false);
             statusStrip1.PerformLayout();
             ResumeLayout(false);
@@ -103,8 +120,10 @@
 
         private StatusStrip statusStrip1;
         private Button Connect;
-        private ToolStripStatusLabel connectionStatus;
+        private ToolStripStatusLabel connectionStatus , redisStatus;
         private System.Windows.Forms.Timer timer1;
         private ListView listView1;
+        private ColumnHeader Key;
+        private ColumnHeader Value;
     }
 }

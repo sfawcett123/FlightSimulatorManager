@@ -1,0 +1,15 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="FlightSimulator.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="redis_server" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">controller.local</Value>
+    </Setting>
+    <Setting Name="redis_port" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">6666</Value>
+    </Setting>
+    <Setting Name="clock_interval" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">1000</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
