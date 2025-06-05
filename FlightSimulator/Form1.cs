@@ -16,6 +16,35 @@ namespace FlightSimulator
             InitializeComponent();
         }
 
+        private void Populate()
+        {
+            if (connection.IsConnected)
+            {
+              
+                foreach (var req in connection.AircraftData())
+                {
+                    bool add = true;   
+                    foreach ( ListViewItem item in listView1.Items )
+                    {
+                        if (item.Text == req.Key)
+                        {
+                            item.SubItems.Clear();
+                            item.Text = req.Key;
+                            item.SubItems.Add(req.Value);
+                            add= false;
+                            break;
+                        }
+                    }
+                    if (add)
+                    {
+                        ListViewItem newitem = new ListViewItem(req.Key, 0);
+                        newitem.Text = req.Key;   
+                        newitem.SubItems.Add(req.Value);
+                        listView1.Items.AddRange(new ListViewItem[] { newitem });
+                    }
+                }
+            }
+        }
         private void Connect_Click(object sender, EventArgs e)
         {
             try
@@ -60,6 +89,7 @@ namespace FlightSimulator
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+
             if (connection == null || !connection.IsConnected)
             {
                 connectionStatus.Text = "Not Connected";
@@ -68,18 +98,7 @@ namespace FlightSimulator
                 timer1.Enabled = false;
                 return;
             }
-            connectionStatus.ForeColor = Color.Black;
-            connectionStatus.Text = "";
-
-            foreach (var req in connection.AircraftData())
-            {
-                if (req.Key == "PLANE LATITUDE")
-                {
-                    connectionStatus.Text = $"{req.Key} -> {req}";
-                    connectionStatus.ForeColor = Color.Yellow;
-                    break;
-                }
-            }
+            Populate();
         }
     }
 } // End of namespace FlightSimulator

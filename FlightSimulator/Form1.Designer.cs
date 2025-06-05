@@ -33,6 +33,7 @@
             connectionStatus = new ToolStripStatusLabel();
             Connect = new Button();
             timer1 = new System.Windows.Forms.Timer(components);
+            listView1 = new ListView();
             statusStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -43,7 +44,7 @@
             statusStrip1.Items.AddRange(new ToolStripItem[] { connectionStatus });
             statusStrip1.Location = new Point(0, 428);
             statusStrip1.Name = "statusStrip1";
-            statusStrip1.Size = new Size(800, 22);
+            statusStrip1.Size = new Size(433, 22);
             statusStrip1.TabIndex = 0;
             statusStrip1.Text = "Not Connected";
             // 
@@ -55,7 +56,7 @@
             // 
             // Connect
             // 
-            Connect.Location = new Point(713, 393);
+            Connect.Location = new Point(347, 386);
             Connect.Name = "Connect";
             Connect.Size = new Size(75, 23);
             Connect.TabIndex = 1;
@@ -67,11 +68,27 @@
             // 
             timer1.Tick += timer1_Tick;
             // 
+            // listView1
+            // 
+            listView1.Location = new Point(16, 13);
+            listView1.Name = "listView1";
+            listView1.Size = new Size(325, 396);
+            listView1.TabIndex = 2;
+            listView1.UseCompatibleStateImageBehavior = false;
+            listView1.AllowColumnReorder = true;
+            listView1.GridLines = true;
+            listView1.FullRowSelect = true;
+            listView1.Sorting = SortOrder.Ascending;
+            listView1.View = View.Details;
+            listView1.Columns.Add("Key", -2, HorizontalAlignment.Left);
+            listView1.Columns.Add("Value", -2, HorizontalAlignment.Left);
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(433, 450);
+            Controls.Add(listView1);
             Controls.Add(Connect);
             Controls.Add(statusStrip1);
             Name = "Form1";
@@ -88,5 +105,6 @@
         private Button Connect;
         private ToolStripStatusLabel connectionStatus;
         private System.Windows.Forms.Timer timer1;
+        private ListView listView1;
     }
 }
