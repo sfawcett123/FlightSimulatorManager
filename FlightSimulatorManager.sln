@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36202.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimListener", "SimListener\SimListener.csproj", "{3D5411AB-5DEE-4132-B5D8-6C862AF97A0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlightSimulator", "FlightSimulator\FlightSimulator.csproj", "{15A06DDA-9BE8-4DE0-8BF1-1E9D2C396C63}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3D5411AB-5DEE-4132-B5D8-6C862AF97A0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D5411AB-5DEE-4132-B5D8-6C862AF97A0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D5411AB-5DEE-4132-B5D8-6C862AF97A0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D5411AB-5DEE-4132-B5D8-6C862AF97A0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{15A06DDA-9BE8-4DE0-8BF1-1E9D2C396C63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{15A06DDA-9BE8-4DE0-8BF1-1E9D2C396C63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{15A06DDA-9BE8-4DE0-8BF1-1E9D2C396C63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{15A06DDA-9BE8-4DE0-8BF1-1E9D2C396C63}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0D32F4E5-FA7F-45EB-B340-CB513A449151}
+	EndGlobalSection
+EndGlobal
