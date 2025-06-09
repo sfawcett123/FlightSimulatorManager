@@ -6,6 +6,20 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Title>Flight Simulator Listener</Title>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/sfawcett123/FlightSimulatorManager</RepositoryUrl>
+    <PackageProjectUrl>https://sfawcett123.github.io/</PackageProjectUrl>
+    <Copyright>Steven Fawcett</Copyright>
+    <Description>Microsoft Flight Simulator Listener</Description>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>MSFS;redis</PackageTags>
+    <PackAsTool>False</PackAsTool>
+    <AssemblyVersion>0.0.0.0</AssemblyVersion>
+    <FileVersion>0.0.0.0</FileVersion>
+    <PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+    <PackageLicenseFile>LICENSE.txt</PackageLicenseFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -15,6 +29,17 @@
 
   <ItemGroup>
     <Folder Include="img\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\LICENSE.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
