@@ -32,8 +32,6 @@
             statusStrip1 = new StatusStrip();
             connectionStatus = new ToolStripStatusLabel();
             redisStatus = new ToolStripStatusLabel();
-            Connect = new Button();
-            timer1 = new System.Windows.Forms.Timer(components);
             listView1 = new ListView();
             Key = new ColumnHeader();
             Value = new ColumnHeader();
@@ -61,20 +59,7 @@
             redisStatus.Image = Properties.Resources.redis_red;
             redisStatus.Name = "redisStatus";
             redisStatus.Size = new Size(16, 17);
-            // 
-            // Connect
-            // 
-            Connect.Location = new Point(571, 390);
-            Connect.Name = "Connect";
-            Connect.Size = new Size(75, 23);
-            Connect.TabIndex = 1;
-            Connect.Text = "Connect";
-            Connect.UseVisualStyleBackColor = true;
-            Connect.Click += Connect_Click;
-            // 
-            // timer1
-            // 
-            timer1.Tick += timer1_Tick;
+
             // 
             // listView1
             // 
@@ -106,7 +91,6 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(658, 450);
             Controls.Add(listView1);
-            Controls.Add(Connect);
             Controls.Add(statusStrip1);
             Name = "Form1";
             Text = "Flight Simulator Listener";
@@ -119,9 +103,7 @@
         #endregion
 
         private StatusStrip statusStrip1;
-        private Button Connect;
         private ToolStripStatusLabel connectionStatus , redisStatus;
-        private System.Windows.Forms.Timer timer1;
         private ListView listView1;
         private ColumnHeader Key;
         private ColumnHeader Value;
